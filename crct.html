@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth System</title>
     <style>
-        /* CSS Reset */
+        
         * {
             margin: 0;
             padding: 0;
@@ -135,7 +135,7 @@
         <div class="auth-box">
             
 
-            <!-- Login Form -->
+            
             <div id="login-form">
                 <h1>Login to Your Account</h1>
                 <div id="login-error" class="error-message hidden"></div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
 
-            <!-- Signup Form -->
+            
             <div id="signup-form" class="hidden">
                 <h1>Create an Account</h1>
                 <div id="signup-error" class="error-message hidden"></div>
@@ -215,7 +215,7 @@
             document.getElementById('login-success').textContent = 'Login successful! Redirecting...';
             document.getElementById('login-success').classList.remove('hidden');
             
-            // In a real app, you would redirect or handle the login response
+            
         });
 
         document.getElementById('signup').addEventListener('submit', function(e) {
@@ -225,7 +225,7 @@
             const password = document.getElementById('signup-password').value;
             const confirmPassword = document.getElementById('signup-confirm-password').value;
             
-            // Simple validation
+            
             if (password !== confirmPassword) {
                 document.getElementById('signup-error').textContent = 'Passwords do not match!';
                 document.getElementById('signup-error').classList.remove('hidden');
@@ -233,15 +233,15 @@
                 return;
             }
             
-            // Here you would typically send this data to your backend
+            
             console.log('Signup attempt with:', {name, email, password});
             
-            // For demo purposes, we'll just show a success message
+            
             document.getElementById('signup-error').classList.add('hidden');
             document.getElementById('signup-success').textContent = 'Account created successfully!';
             document.getElementById('signup-success').classList.remove('hidden');
             
-            // Clear form
+            
             document.getElementById('signup').reset();
         });
     </script>
